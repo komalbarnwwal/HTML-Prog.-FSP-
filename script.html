@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <script>
+            //cheking weather the fields are empty or not on pressing the submit button
+
+            function validateForm(){
+                var x = document.forms["myForm"]["fname1"].value;
+                var y = document.forms["myForm"]["fname2"].value;
+                var z = document.forms["myForm"]["fname3"].value;
+
+                if((x==null || x=="")&&(y==null || y=="")&&(z==null || z==""))
+                {
+                    alert("All fields are blank");
+                    document.forms["myForm"]["fname1"].focus(); //to highlight this field
+                    return false;
+                }
+                if(x==null || x==""){
+                    alert("First name is missing");
+                    document.forms["myForm"]["fname1"].focus(); //to highlight this field
+                    return false;
+                }
+                if(y==null || y==""){
+                    alert("Password must be filled out");
+                    document.forms["myForm"]["fname2"].focus(); //to highlight this field
+                    return false;
+                }
+                if(z==null || z==""){
+                    alert("EmailId must be filled out");
+                    document.forms["myForm"]["fname3"].focus(); //to highlight this field
+                    return false;
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <form name="myForm" action="" onsubmit="return validateForm()" method="post">
+            First name: <input type="text" name="fname1">
+            Password: <input type="password" name="fname2">
+            Email: <input type="text" name="fname3">
+
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+    </body>
+</html>

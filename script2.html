@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script>
+            //cheking weather the field contains number or not
+
+            function check(){
+                var y = document.forms["myForm"]["fname2"].value;
+                if(isNaNy(y)==true)
+                {
+                    alert("Please enter a valid age");
+                    document.forms["myForm"]["fname2"].value();
+                    document.forms["myForm"]["fname2"].focus();
+                    return false;
+                }
+            }
+        </script>
+    </head>     
+    <body>
+        <form name="myForm" action="" onsubmit="return check()" method="post">
+
+            Age: <input type="text" name="fname2">
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>     
+     </body>   
+</html>     

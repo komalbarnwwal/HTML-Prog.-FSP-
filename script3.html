@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <script>
+            //cheking weather the field contains number or not
+
+            function check(){
+                var x = document.forms["myForm"]["fname2"].value;
+                var y = document.forms["myForm"]["fname2"].value;
+                if(x.length<6)
+                {
+                    alert("Password should be minimum 6 characters long");
+                    document.forms["myForm"]["fname1"].value="";
+                    document.forms["myForm"]["fname1"].focus();
+                    return false;
+                }
+                if(x!=y){
+                    alert("Passwords does not match");
+                    document.forms["myForm"]["fname2"].focus(); 
+                    return false(); 
+                }
+            }
+        </script>    
+    </head>
+    <body>
+        <form name="myForm" action="" onsubmit="return check()" method="post">
+
+            Password: <input type="password" name="fname1">
+            Confirm Password: <input type="password" name="fname2">
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>    
+    </body>    
+</html>    
